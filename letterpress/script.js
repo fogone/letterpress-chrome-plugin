@@ -267,7 +267,7 @@ Nobirds.LetterPress = {
         };
 
         storage.getStoredWords().forEach(function (word) {
-            if(usedWords.check(word) && letters.check(word)) {
+            if(!usedWords.contains(word) && letters.check(word)) {
                 add(word);
             }
         });

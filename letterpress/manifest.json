@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-	"name": "Letterpress extenstion",
+	"name": "Словарик для леттерпресс.рф",
 	"version": "1.0",
-	"description": "Making your letterpress easier.",
+	"description": "Локальный словарик, позволяет сохранять слова для каждой отдельной игры, просто их подставлять или очищать введенные буквы одной кнопкой.",
 	"icons":{
 		"128":"icon_128.png"
 	},

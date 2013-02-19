@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+	"name": "Letterpress extenstion",
+	"version": "1.0",
+	"description": "Making your letterpress easier.",
+	"icons":{
+		"128":"icon_128.png"
+	},
+
+    "permissions": [
+        "storage"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["http://xn--e1aaavwfbjada.xn--p1ai/game/play/*"],
+            "css": ["style.css"],
+            "js": ["script.js"],
+            "run_at": "document_start"
+        }
+    ]
+}

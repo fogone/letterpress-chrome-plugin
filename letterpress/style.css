@@ -1,0 +1,51 @@
+#letterpress-plugin-words-list {
+    width: 30em;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+.letterpress-plugin-word-block {
+    display: inline-block;
+}
+
+.letterpress-plugin-word {
+    display: inline-block;
+    background: #73A363;
+    color: #fff;
+    padding: 2px 7px;
+    margin: 2px 0 2px 2px;
+    border-radius: 2px 0 0 2px;
+    cursor: pointer;
+}
+
+.letterpress-plugin-word-remove {
+    display: inline-block;
+    background: #7ab5d3;
+    color: #fff;
+    padding: 2px 7px;
+    margin: 2px 2px 2px 0;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+}
+
+.letterpress-plugin-remove-all {
+    font-size: 25px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    padding: 3px 4px 6px 4px;
+    margin-left: 5px;
+    text-align: center;
+    background: #7ab5d3;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 3px 9px #DDD;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

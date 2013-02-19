@@ -157,9 +157,10 @@ Nobirds.LetterPress = {
         var gameId = Nobirds.LetterPress.getGameId();
 
         var splitWords = function(words) {
-            return words.split(",").map(function (item) {
-                return item.trim();
-            });
+            return words
+                .split(/[\s,]/)
+                .map(function (item) { return item.trim().toLocaleLowerCase() })
+                .filter(function(item) { return item.length });
         };
 
         var createWordsList = function () {
@@ -175,6 +176,10 @@ Nobirds.LetterPress = {
 
                     if(!letters.checkAll(words)) {
                         // smoke.signal('Нет нужных букв', 2000);
+                        return true;
+                    }
+
+                    if(storage.containsAny(words)) {
                         return true;
                     }
 
@@ -304,6 +309,12 @@ Nobirds.LetterPress = {
         this.deleteStoredWord = function (word) {
             delete words[word];
             saveWords();
+        };
+
+        this.containsAny = function(items) {
+            return items.some(function(word) {
+                return words[word];
+            });
         };
 
         return this;
